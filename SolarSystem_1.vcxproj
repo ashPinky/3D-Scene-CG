@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core\Application.cpp" />
+    <ClCompile Include="src\core\geometry\Mesh.cpp" />
+    <ClCompile Include="src\core\MeshLoader.cpp" />
+    <ClCompile Include="src\core\Time.cpp" />
+    <ClCompile Include="src\core\Window.cpp" />
+    <ClCompile Include="src\EntryPoint.cpp" />
+    <ClCompile Include="src\events\EventDispatcher.cpp" />
+    <ClCompile Include="src\graphics\camera\Camera.cpp" />
+    <ClCompile Include="src\graphics\camera\CameraController.cpp" />
+    <ClCompile Include="src\graphics\camera\FlyCamera.cpp" />
+    <ClCompile Include="src\graphics\camera\PerspectiveCamera.cpp" />
+    <ClCompile Include="src\graphics\GraphicsContext.cpp" />
+    <ClCompile Include="src\graphics\platform\opengl\GLBuffer.cpp" />
+    <ClCompile Include="src\graphics\platform\opengl\GLShader.cpp" />
+    <ClCompile Include="src\graphics\platform\opengl\GLTexture.cpp" />
+    <ClCompile Include="src\graphics\platform\opengl\GLVertexArray.cpp" />
+    <ClCompile Include="src\graphics\RendererCommand.cpp" />
+    <ClCompile Include="src\graphics\Texture.cpp" />
+    <ClCompile Include="src\graphics\VertexLayout.cpp" />
+    <ClCompile Include="src\input\InputManager.cpp" />
+    <ClCompile Include="src\input\KeyListener.cpp" />
+    <ClCompile Include="src\input\MouseListener.cpp" />
+    <ClCompile Include="src\utilities\String.cpp" />
+    <ClCompile Include="vendor\stb_image\stb_image.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\glew32.lib" />
+    <Library Include="lib\glew32s.lib" />
+    <Library Include="lib\glfw3dll.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\common\Alias.hpp" />
+    <ClInclude Include="include\common\Assert.hpp" />
+    <ClInclude Include="include\common\PlatformDetection.hpp" />
+    <ClInclude Include="include\core\Application.hpp" />
+    <ClInclude Include="include\core\ApplicationProps.hpp" />
+    <ClInclude Include="include\core\geometry\Mesh.hpp" />
+    <ClInclude Include="include\core\math\Math.hpp" />
+    <ClInclude Include="include\core\math\Matrix.hpp" />
+    <ClInclude Include="include\core\math\Operations.hpp" />
+    <ClInclude Include="include\core\math\Transformations.hpp" />
+    <ClInclude Include="include\core\math\Vector.hpp" />
+    <ClInclude Include="include\core\MeshLoader.hpp" />
+    <ClInclude Include="include\core\Singleton.hpp" />
+    <ClInclude Include="include\core\Time.hpp" />
+    <ClInclude Include="include\core\Window.hpp" />
+    <ClInclude Include="include\events\ApplicationEvent.hpp" />
+    <ClInclude Include="include\events\Event.hpp" />
+    <ClInclude Include="include\events\EventDispatcher.hpp" />
+    <ClInclude Include="include\events\EventHandler.hpp" />
+    <ClInclude Include="include\events\KeyEvent.hpp" />
+    <ClInclude Include="include\events\MouseEvent.hpp" />
+    <ClInclude Include="include\graphics\camera\Camera.hpp" />
+    <ClInclude Include="include\graphics\camera\CameraController.hpp" />
+    <ClInclude Include="include\graphics\camera\FlyCamera.hpp" />
+    <ClInclude Include="include\graphics\camera\PerspectiveCamera.hpp" />
+    <ClInclude Include="include\graphics\GraphicsContext.hpp" />
+    <ClInclude Include="include\graphics\platform\opengl\GLBuffer.hpp" />
+    <ClInclude Include="include\graphics\platform\opengl\GLDebug.hpp" />
+    <ClInclude Include="include\graphics\platform\opengl\GLShader.hpp" />
+    <ClInclude Include="include\graphics\platform\opengl\GLTexture.hpp" />
+    <ClInclude Include="include\graphics\platform\opengl\GLVertexArray.hpp" />
+    <ClInclude Include="include\graphics\RendererCommand.hpp" />
+    <ClInclude Include="include\graphics\Texture.hpp" />
+    <ClInclude Include="include\graphics\VertexLayout.hpp" />
+    <ClInclude Include="include\input\InputManager.hpp" />
+    <ClInclude Include="include\input\KeyCodes.hpp" />
+    <ClInclude Include="include\input\KeyListener.hpp" />
+    <ClInclude Include="include\input\MouseCodes.hpp" />
+    <ClInclude Include="include\input\MouseListener.hpp" />
+    <ClInclude Include="include\RenderEngine.hpp" />
+    <ClInclude Include="include\Sandbox.hpp" />
+    <ClInclude Include="include\utilities\String.hpp" />
+    <ClInclude Include="vendor\glew\eglew.h" />
+    <ClInclude Include="vendor\glew\glew.h" />
+    <ClInclude Include="vendor\glew\glxew.h" />
+    <ClInclude Include="vendor\glew\wglew.h" />
+    <ClInclude Include="vendor\glfw\glfw3.h" />
+    <ClInclude Include="vendor\glfw\glfw3native.h" />
+    <ClInclude Include="vendor\stb_image\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build\glew32.dll" />
+    <None Include="build\glfw3.dll" />
+    <None Include="build\sandbox.exe" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{fcb63419-f805-469d-97a9-67c58981c554}</ProjectGuid>
+    <RootNamespace>SolarSystem1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\AZK\Desktop\SolarSystem_1\include;$(IncludePath)</IncludePath>
+    <OutDir>C:\Users\AZK\Desktop\SolarSystem_1\build</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\AZK\Desktop\SolarSystem_1\include;$(IncludePath)</IncludePath>
+    <OutDir>C:\Users\hossa\OneDrive\Desktop\SolarSystem_1\SolarSystem_1\build</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\AZK\Desktop\SolarSystem_1\include;C:\Users\AZK\Desktop\SolarSystem_1\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\AZK\Desktop\SolarSystem_1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glfw3dll.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\hossa\OneDrive\Desktop\SolarSystem_1\SolarSystem_1\include;C:\Users\hossa\OneDrive\Desktop\SolarSystem_1\SolarSystem_1\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\hossa\OneDrive\Desktop\SolarSystem_1\SolarSystem_1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glfw3dll.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
